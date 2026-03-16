@@ -1231,9 +1231,9 @@ section .team {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  min-height: 584px;
-  padding: 72px 24px 24px;
+  width: 288px;
+  min-height: 623px;
+  padding: 72px 16px 16px;
   border-radius: 4px;
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
@@ -1407,7 +1407,7 @@ section .team {
   position: relative;
   width: 16px;
   height: 16px;
-
+  flex: 0 0 auto;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   display: flex;
@@ -1481,6 +1481,11 @@ textarea:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 24px 24px;
+  }
 }
 @media screen and (min-width: 1158px) {
 }
