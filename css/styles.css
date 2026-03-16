@@ -511,6 +511,12 @@ button {
   padding: 72px 0;
 }
 
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/heroimage-2px.jpg");
+  }
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 36px;
