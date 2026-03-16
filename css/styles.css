@@ -846,7 +846,8 @@ button {
 }
 @media screen and (min-width: 1158px) {
   .team .container {
-    padding: 0 16px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .section.team {
