@@ -1024,6 +1024,7 @@ section .team {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  align-self: center;
 }
 
 .site-footer .social-list {
@@ -1060,6 +1061,7 @@ section .team {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  align-self: center;
 }
 
 .subscribe-icon {
@@ -1147,9 +1149,17 @@ section .team {
     margin: 0;
   }
 
+  .social-media {
+    align-self: flex-start;
+  }
+
   .footer-subscribe {
     width: 453px;
     margin: 0;
+  }
+
+  .subscribe-title {
+    align-self: flex-start;
   }
 
   .subscribe-form {
@@ -1181,6 +1191,10 @@ section .team {
     flex-wrap: nowrap;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .footer-subscribe {
+    margin-left: auto;
   }
 }
 
