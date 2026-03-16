@@ -705,7 +705,7 @@ button {
 .team {
   background-color: #f4f4fd;
 }
-section .team {
+.section.team {
   padding: 96px 0;
 }
 
