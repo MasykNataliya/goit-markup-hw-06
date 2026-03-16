@@ -215,16 +215,16 @@ button {
   .main-nav-link {
     font-weight: 500;
     font-size: 16px;
-    /* line-height: 24px; */
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
     display: block;
-    padding: 24px 0;
+
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .main-nav-link.current {
     position: relative;
+    color: #404bbf;
   }
   .main-nav-link.current::after {
     content: "";
@@ -278,7 +278,7 @@ button {
   }
 
   .contact-info-list {
-    flex-direction: column;
+    flex-direction: row;
     gap: 40px;
   }
 
@@ -289,6 +289,208 @@ button {
     letter-spacing: 0.02em;
   }
 }
+/* #region mobile-menu*/
+
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu-container {
+  position: relative;
+  padding-top: 52px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.mobile-nav {
+  margin-bottom: auto;
+  display: flex;
+  align-items: flex-start;
+  align-self: flex-start;
+  padding-top: 20px;
+}
+
+.mobile-nav-list {
+  display: flex;
+
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 0 auto;
+}
+
+.mobile-nav-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+
+  display: block;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-nav-link.current {
+  position: relative;
+  color: #404bbf;
+}
+.mobile-nav-link.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background-color: #404bbf;
+  border-radius: 2px;
+}
+
+.mobile-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-close-icon {
+  object-fit: contain;
+  display: block;
+  fill: #2e2f42;
+}
+
+.mobile-contact {
+  display: flex;
+  font-style: normal;
+  margin-left: 0 auto;
+  align-self: flex-start;
+}
+
+.mobile-contact-list {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  gap: 24px;
+  align-self: flex-start;
+}
+
+.mobile-contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+
+  display: inline-block;
+  font-style: normal;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-social-list {
+  margin-left: 0 auto;
+  align-self: flex-start;
+  margin-top: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.mobile-social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.mobile-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-social-icon {
+  object-fit: contain;
+  display: block;
+  fill: #f4f4fd;
+}
+
+.mobile-contact-link:hover,
+.mobile-contact-link:focus,
+.mobile-nav-link:hover,
+.mobile-nav-link:focus,
+.mobile-nav-link.current {
+  color: #404bbf;
+}
+
+.mobile-close-btn:hover,
+.mobile-close-btn:focus {
+  border: none;
+}
+
+.mobile-social-link:hover,
+.mobile-social-link:focus {
+  background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* #endregion mobile-menu*/
 
 /* #endregion header */
 
